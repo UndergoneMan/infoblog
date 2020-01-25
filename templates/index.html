@@ -14,17 +14,17 @@
 <div class="container">
 <div class="col-md-12">
     <h1>{{ post.title }}</h1>
-    <p>{{ post.body }}</p>
+    <p>{{ post.body|slice:"200" }}...</p>
     <div>
 <span class="badge">Posted {{ post.created_on }}</span>
+
+
         <div class="float-right">
-            <span class="badge badge-secondary">alice</span>
-            <span class="badge badge-primary">story</span>
-            <span class="badge badge-success">blog</span>
-            <span class="badge badge-info">personal</span>
-            <span class="badge badge-warning">Warning</span>
-            <span class="badge badge-danger">Danger</span>
+            <span class="badge badge-secondary">{{ post.author }}</span>
+            <!-- add category! -->
         </div>
+
+
     </div>
     <hr>
 </div>
