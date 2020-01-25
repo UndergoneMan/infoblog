@@ -3,8 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" id="bootstrap-css">
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 </head>
 <body>
-123
+
+{% for post in posts %}
+
+<div class="container">
+<div class="col-md-12">
+    <h1>{{ post.title }}</h1>
+    <p>{{ post.body }}</p>
+    <div>
+<span class="badge">Posted {{ post.created_on }}</span>
+        <div class="float-right">
+            <span class="badge badge-secondary">alice</span>
+            <span class="badge badge-primary">story</span>
+            <span class="badge badge-success">blog</span>
+            <span class="badge badge-info">personal</span>
+            <span class="badge badge-warning">Warning</span>
+            <span class="badge badge-danger">Danger</span>
+        </div>
+    </div>
+    <hr>
+</div>
+</div>
+
+{% endfor %}
+
 </body>
 </html>
